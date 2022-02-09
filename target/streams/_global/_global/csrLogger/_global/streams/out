@@ -1,0 +1,13 @@
+[debug] downloaded https://repo1.maven.org/maven2/com/google/guava/guava/11.0.2/guava-11.0.2.pom
+[debug] downloaded https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2.pom
+[debug] downloaded https://repo1.maven.org/maven2/com/google/guava/guava-parent/11.0.2/guava-parent-11.0.2.pom
+[debug] downloaded https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcomponents-client/4.5.2/httpcomponents-client-4.5.2.pom
+[debug] downloaded https://repo1.maven.org/maven2/org/apache/httpcomponents/project/7/project-7.pom
+[debug] downloaded https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4.pom
+[debug] downloaded https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcomponents-core/4.4.4/httpcomponents-core-4.4.4.pom
+[debug] downloaded https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4.jar
+[debug] downloaded https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2.jar
+[debug] downloaded https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4-sources.jar
+[debug] downloaded https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2-sources.jar
+[debug] downloaded https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4-javadoc.jar
+[debug] downloaded https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2-javadoc.jar

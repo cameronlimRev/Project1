@@ -1,0 +1,81 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[info] Updated file D:\Revature\Project1\project\build.properties: set sbt.version to 1.5.7
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.5.7 (Oracle Corporation Java 1.8.0_40)
+[debug]       Load.loadUnit: plugins took 71.9982ms
+[debug]       Load.loadUnit: defsScala took 0.3481ms
+[debug] [Loading] Scanning directory C:\Users\Cameron\.sbt\1.0\plugins
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\Cameron\.sbt\1.0\plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 15.5926 ms
+[debug]           Load.resolveProject(global-plugins) took 48.1893ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: C:\Users\Cameron\.sbt\1.0\plugins, plugins: List(<none>))) took 84.8128ms
+[debug] [Loading] Done in C:\Users\Cameron\.sbt\1.0\plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 105.6018ms
+[debug]       Load.loadUnit: cleanEvalClasses took 0.3555ms
+[debug]     Load.loadUnit(file:/C:/Users/Cameron/.sbt/1.0/plugins/, ...) took 186.0824ms
+[debug]   Load.apply: load took 364.9734ms
+[debug]   Load.apply: resolveProjects took 5.0553ms
+[debug]   Load.apply: finalTransforms took 57.4325ms
+[debug]   Load.apply: config.delegates took 14.7751ms
+[debug]   Load.apply: Def.make(settings)... took 427.7639ms
+[debug]   Load.apply: structureIndex took 88.9658ms
+[debug]   Load.apply: mkStreams took 1.5396ms
+[info] loading global plugins from C:\Users\Cameron\.sbt\1.0\plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 5070.3194ms
+[debug]           Load.loadUnit: plugins took 23.6237ms
+[debug]           Load.loadUnit: defsScala took 0.0031ms
+[debug] [Loading] Scanning directory D:\Revature\Project1\project
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in D:\Revature\Project1\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 1.3067 ms
+[debug]               Load.resolveProject(project1-build) took 0.7721ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id project1-build, base: D:\Revature\Project1\project, plugins: List(<none>))) took 2.4528ms
+[debug] [Loading] Done in D:\Revature\Project1\project, returning: (project1-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 3.8503ms
+[debug]           Load.loadUnit: cleanEvalClasses took 0.0069ms
+[debug]         Load.loadUnit(file:/D:/Revature/Project1/project/, ...) took 28.0661ms
+[debug]       Load.apply: load took 28.7282ms
+[debug]       Load.apply: resolveProjects took 0.0787ms
+[debug]       Load.apply: finalTransforms took 5.5437ms
+[debug]       Load.apply: config.delegates took 0.3319ms
+[debug]       Load.apply: Def.make(settings)... took 67.7786ms
+[debug]       Load.apply: structureIndex took 20.5974ms
+[debug]       Load.apply: mkStreams took 0.0021ms
+[info] loading project definition from D:\Revature\Project1\project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
