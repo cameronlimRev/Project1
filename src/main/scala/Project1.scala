@@ -5,7 +5,7 @@ import org.apache.spark.sql.functions.asc
 
 import scala.io.StdIn.{readDouble, readInt, readLine}
 
-object HiveTest5 {
+object Project1 {
 
     def createDatabase(spark:SparkSession): Unit = {
         spark.sql("DROP TABLE IF EXISTS bev_branchA")
@@ -31,28 +31,28 @@ object HiveTest5 {
 
     def scenario1(spark: SparkSession): Unit = {
         // Answer
-        spark.sql("DROP TABLE IF EXISTS branch1")
-        spark.sql("create table if not exists branch1(beverage String, consumers Int)")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='SMALL_Espresso') as t) as b where row_num %2 != 0 group by beverage")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='Special_Coffee') as t) as b where row_num %2 != 0 group by beverage")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='Double_Espresso') as t) as b where row_num %2 != 0 group by beverage")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='MED_MOCHA') as t) as b where row_num %2 != 0 group by beverage")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='LARGE_cappuccino') as t) as b where row_num %3 = 0 group by beverage")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='Triple_MOCHA') as t) as b where row_num %2 = 0 group by beverage")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='Mild_LATTE') as t) as b where row_num %2 = 0 group by beverage")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from bev_countA where beverage='ICY_Espresso' group by beverage")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from bev_countA where beverage='Cold_LATTE' group by beverage")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from bev_countA where beverage='SMALL_MOCHA' group by beverage")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='Special_cappuccino') as t) as b where row_num %3 = 0 group by beverage")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from bev_countA where beverage='Double_MOCHA' group by beverage")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='MED_LATTE') as t) as b where row_num %2 != 0 group by beverage")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='LARGE_Espresso') as t) as b where row_num %2 != 0 group by beverage")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='Triple_LATTE') as t) as b where row_num %2 != 0 group by beverage")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='Mild_Lite') as t) as b where row_num %2 != 0 group by beverage")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='ICY_MOCHA') as t) as b where row_num %2 != 0 group by beverage")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='Cold_Lite') as t) as b where row_num %2 != 0 group by beverage")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='SMALL_LATTE') as t) as b where row_num %2 != 0 group by beverage")
-        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='Special_Espresso') as t) as b where row_num %2 != 0 group by beverage")
+//        spark.sql("DROP TABLE IF EXISTS branch1")
+//        spark.sql("create table if not exists branch1(beverage String, consumers Int)")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='SMALL_Espresso') as t) as b where row_num %2 != 0 group by beverage")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='Special_Coffee') as t) as b where row_num %2 != 0 group by beverage")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='Double_Espresso') as t) as b where row_num %2 != 0 group by beverage")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='MED_MOCHA') as t) as b where row_num %2 != 0 group by beverage")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='LARGE_cappuccino') as t) as b where row_num %3 = 0 group by beverage")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='Triple_MOCHA') as t) as b where row_num %2 = 0 group by beverage")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='Mild_LATTE') as t) as b where row_num %2 = 0 group by beverage")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from bev_countA where beverage='ICY_Espresso' group by beverage")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from bev_countA where beverage='Cold_LATTE' group by beverage")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from bev_countA where beverage='SMALL_MOCHA' group by beverage")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='Special_cappuccino') as t) as b where row_num %3 = 0 group by beverage")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from bev_countA where beverage='Double_MOCHA' group by beverage")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='MED_LATTE') as t) as b where row_num %2 != 0 group by beverage")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='LARGE_Espresso') as t) as b where row_num %2 != 0 group by beverage")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='Triple_LATTE') as t) as b where row_num %2 != 0 group by beverage")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='Mild_Lite') as t) as b where row_num %2 != 0 group by beverage")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='ICY_MOCHA') as t) as b where row_num %2 != 0 group by beverage")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='Cold_Lite') as t) as b where row_num %2 != 0 group by beverage")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='SMALL_LATTE') as t) as b where row_num %2 != 0 group by beverage")
+//        spark.sql("INSERT INTO TABLE branch1 SELECT beverage, SUM(consumers) from (select * from (select row_number() OVER (order by id) AS row_num, beverage, consumers from bev_countA where beverage='Special_Espresso') as t) as b where row_num %2 != 0 group by beverage")
 
 //        spark.sql("INSERT OVERWRITE TABLE  branch1 SELECT id, first(beverage), SUM(consumers) from bev_countA group by id")
         println("These are the following consumed drinks in Branch 1:")
@@ -158,11 +158,15 @@ object HiveTest5 {
 
     def scenario3(spark: SparkSession): Unit = {
         println("The beverages available on Branches 1,8, and 9 are:  ")
-        spark.sql("SELECT DISTINCT bev_branchA.beverage from bev_branchA JOIN bev_branchB ON bev_branchA.beverage = bev_branchB.beverage AND (bev_branchA.branch='Branch1' OR bev_branchA.branch='Branch8' OR bev_branchA.branch='Branch9') JOIN bev_branchC ON bev_branchA.beverage = bev_branchC.beverage AND (bev_branchA.branch='Branch1' OR bev_branchA.branch='Branch8' OR bev_branchA.branch='Branch9')").show(100)
+        spark.sql("SELECT DISTINCT bev_branchA.beverage from bev_branchA JOIN bev_branchB ON bev_branchA.beverage = bev_branchB.beverage " +
+          "AND (bev_branchA.branch='Branch1' OR bev_branchA.branch='Branch8' OR bev_branchA.branch='Branch9') JOIN bev_branchC ON bev_branchA.beverage = bev_branchC.beverage " +
+          "AND (bev_branchA.branch='Branch1' OR bev_branchA.branch='Branch8' OR bev_branchA.branch='Branch9')").show(100)
         println("The common beverages between Branch 4 and Branch 7 are: ")
-        spark.sql("SELECT DISTINCT bev_branchB.beverage from bev_branchB where (branch='Branch4' OR branch='Branch7') INTERSECT (SELECT bev_branchC.beverage from bev_branchC where (branch='Branch4' OR branch='Branch7'))").show(100)
+        spark.sql("SELECT DISTINCT bev_branchB.beverage from bev_branchB where (branch='Branch4' OR branch='Branch7') " +
+          "INTERSECT (SELECT bev_branchC.beverage from bev_branchC where (branch='Branch4' OR branch='Branch7'))").show(100)
         println("Extra information to help understand and verify the joins and intersections: ")
-        spark.sql("select count(*) as Number_of_Similar_Beverages from (SELECT DISTINCT bev_branchB.beverage from bev_branchB where (branch='Branch4' OR branch='Branch7') INTERSECT (SELECT bev_branchC.beverage from bev_branchC where (branch='Branch4' OR branch='Branch7')))").show(100)
+        spark.sql("select count(*) as Number_of_Similar_Beverages from (SELECT DISTINCT bev_branchB.beverage from bev_branchB where (branch='Branch4' OR branch='Branch7') " +
+          "INTERSECT (SELECT bev_branchC.beverage from bev_branchC where (branch='Branch4' OR branch='Branch7')))").show(100)
         spark.sql("select count(DISTINCT beverage) as Total_Beverage_BranchA FROM bev_branchA").show(100)
         spark.sql("select count(DISTINCT beverage) as Total_Beverage_BranchB FROM bev_branchB").show(100)
         spark.sql("select count(DISTINCT beverage) as Total_Beverage_BranchC FROM bev_branchC").show(100)
@@ -185,16 +189,31 @@ object HiveTest5 {
         spark.sql("Select DISTINCT beverage from scenario4_table where (branch='Branch1' OR branch='Branch8' OR branch='Branch9')").show(1000)
 
         spark.sql("DROP VIEW IF EXISTS scenario3_view")
-        spark.sql("CREATE VIEW scenario3_view AS SELECT DISTINCT bev_branchB.beverage from bev_branchB where (branch='Branch4' OR branch='Branch7') INTERSECT (SELECT bev_branchC.beverage from bev_branchC where (branch='Branch4' OR branch='Branch7'))")
+        spark.sql("CREATE VIEW scenario3_view AS SELECT DISTINCT bev_branchB.beverage from bev_branchB where (branch='Branch4' OR branch='Branch7') " +
+          "INTERSECT (SELECT bev_branchC.beverage from bev_branchC where (branch='Branch4' OR branch='Branch7'))")
         println("View has been created.")
         spark.sql("SELECT * from scenario3_view").show(100)
     }
 
     def scenario5(spark: SparkSession): Unit = {
-        val result = readLine("Enter the comment you want to add to scenario 4's table: ")
+        spark.conf.set("hive.exec.dynamic.partition.mode", "nonstrict")
+        println("Please make sure to run scenario 4 before running scenario 5. We will be referencing the table created from scenario 4 for these queries.")
+        var result = readLine("Enter the comment you want to add to scenario 4's table: ")
         spark.sql(s"COMMENT ON TABLE scenario4_table is '$result'")
         println("Table altered to add comment.")
+        result = readLine("Enter the note you want to add to scenario 4's table: ")
+        spark.sql(s"ALTER TABLE scenario4_table SET TBLPROPERTIES('notes' = '$result')")
+        println("Table note added.")
+        spark.sql("DESCRIBE FORMATTED scenario4_table").show()
 
+        println()
+        println()
+        println("Starting to remove a row...")
+        spark.sql("SELECT * from scenario4_table").show(1000)
+        spark.sql("CREATE TABLE IF NOT EXISTS scenario4_copy LIKE scenario4_table")
+        spark.sql("INSERT INTO scenario4_copy (SELECT * FROM scenario4_table WHERE branch NOT IN (SELECT branch FROM scenario4_table WHERE branch='Branch3'))")
+        spark.sql("DROP TABLE scenario4_table")
+        spark.sql("SELECT * from scenario4_copy").show(1000)
     }
 
     def scenario6(spark: SparkSession): Unit = {
@@ -220,7 +239,8 @@ object HiveTest5 {
         spark.sql("SELECT SUM(consumers) as Med_Drinks_Consumed from meddrinks").show()
         spark.sql("SELECT SUM(consumers) as Large_Drinks_Consumed from largedrinks").show()
 
-        println("We have collected the data of each size drink consumed. From the data, we can prepare our stores in the future by analyzing this data to decide the order size\nfor each cup size. We will save money by not over-ordering on small cups and putting more capital into large cups.\n")
+        println("We have collected the data of each size drink consumed. From the data, we can prepare our stores in the future by analyzing this data to decide the order size\n" +
+          "for each cup size. We will save money by not over-ordering on small cups and putting more capital into large cups.\n")
 
     }
 
@@ -238,7 +258,7 @@ object HiveTest5 {
                ||| 7. Exit                                 ||
                |\\\\_________________________________________//
                |""".stripMargin)
-        println("Please enter a number (1-8) to continue: ")
+        println("Please enter a number (1-7) to continue: ")
         val result = readInt()
         return result
     }
@@ -306,7 +326,7 @@ object HiveTest5 {
         spark.sparkContext.setLogLevel("ERROR")
 
         println("Starting testing for Project 1")
-        createDatabase(spark)
+//        createDatabase(spark)
         var start = true
         var action = 1
         action = openMenu()
