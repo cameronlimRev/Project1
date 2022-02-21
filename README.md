@@ -2,9 +2,9 @@
 Sample-HIVE-Project This project is mainly for learning and practicing simple HIVE commands in real time scenarios. Here we have taken some sample coffee shop data and processed some essential queries to demonstrate HDFS & HIVE commands. Using Spark and Scala With Coffee shop data.
 
 # Technologies Used
-*Spark SQL - Version 3.1.2
-*Spark Hive - Version 3.1.2
-*Scala - Version 2.12.13
+* Spark SQL - Version 3.1.2
+* Spark Hive - Version 3.1.2
+* Scala - Version 2.12.13
 
 # Features
 Here is a list of my current features for Project 1:
